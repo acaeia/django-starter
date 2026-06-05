@@ -6,3 +6,6 @@ class Post(models.Model):
   body = models.TextField() #relates to text form area
   slug = models.SlugField()
   date = models.DateTimeField(auto_now_add=True) #date timestamp added every time a post is made.
+  
+  def __str__(self):
+    return self.title
